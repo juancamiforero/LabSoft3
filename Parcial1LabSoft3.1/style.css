@@ -1,0 +1,68 @@
+body{
+    background-color : #c4d0ff ;
+}
+
+
+main {
+            -webkit-column-count:2;
+            -moz-column-count:2;
+            column-count:2;
+        }
+
+h1{
+    text-align: center;
+}
+h2{
+    color: #A93226;
+}
+.Autores{
+    position: relative;
+    text-align: right;
+    font-size:12px;
+    font-style:italic;
+}
+
+.centrado
+{
+    text-align: center;
+    color:  #34495e;
+    font-style: italic;
+}
+.botones
+{
+    width: 100px;
+    height: 100px;
+    
+}
+
+.dependencia1{
+    visibility: hidden;
+    position: absolute;
+}
+
+.dependencia1 p{
+    color:#7F8C8D; 
+}
+.dependencia1 select{
+    background-color: #D4AC0D;
+}
+.dependencia2{
+    visibility: hidden; 
+    position: absolute;
+}
+.dependencia2 p{
+    color:#7F8C8D; 
+}
+.dependencia2 select{
+    background-color: #D7BDE2;
+}
+.dependencia3{
+    visibility: hidden; 
+    position: absolute;
+}
+.dependencia3 p{
+    color:#117A65; 
+}
+.dependencia3 select{
+    background-color: #FDEBD0;
+}

@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Parcial 1</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="dependenciasAJAX.js"></script>
+
+
+</head>
+<body>
+    <p class="Autores">
+        Autores: 
+        -Juan Camilo Forero 
+        -Natalia Orozco
+        -Santiago Guzmán
+    </p>
+    <h1>Gestión de códigos consecutivos para documentos</h1>
+        <hr>
+        <h2>Dependencias de la FIET</h2>
+        <main>
+            <select id="oficina" name="dependecia" onchange="mostrarFormulario(this.value)">
+                <option value="0" selected="selected"> Seleccione una dependencia</option>
+                <option value="1">Decanatura</option>
+                <option value="4">Departamento de Sistemas</option>
+                <option value="5">Departamento de Electrónica</option>                
+            </select>
+
+        <div class="dependencia1" id= "dependenciaDecano">
+            <p>Estas visitando las subdependencias de decanatura</p>
+            <select id= "dependenciaDecano1" name="Decanatura" onchange="agregarNumDocumentoCajaText(oficina.value,this.value)"> 
+                <option value="0" selected="selected">Seleccione una subdependencia</option>
+                <option value="1">Decano</option>
+                <option value="2">Secretaria</option>
+            </select>
+        </div>
+        <div class="dependencia2" id= "dependenciaSistemas">
+            <p>Estas visitando las subdependencias de sistemas</p>
+            <select id= "dependenciaSistemas1" name="Departamento de sistemas" onchange="agregarNumDocumentoCajaText(oficina.value,this.value)"> 
+                <option value="0" selected="selected">Seleccione una subdependencia</option>
+                <option value="1">Jefe de departamento</option>
+                <option value="2">Tesoreria</option>
+            </select>
+            
+        </div>
+        <div class="dependencia3" id= "dependenciaElectronica">
+            <p>Estas visitando las subdependencias de electronica</p>
+            <select  id="dependenciaElectronica1" name="Departamento de Electrónica" onchange="agregarNumDocumentoCajaText(oficina.value,this.value)">
+                <option value="0">Seleccione una subdependencia</option>
+                <option value="1">Jefe de departamento</option>
+                <option value="2">Tesoreria</option>
+            </select>
+        </div>
+        <br><br><br><br><br><br><br><br>
+        <p>Código consecutivo</p>
+        <input type="text" id="codigo" name="documento" readonly value="8">
+        <div class ="botones">
+            <button onclick="loadDoc('GET','tratamientoDatos.php',oficina.value, 1)">Consecutivo</button>
+            <button onclick="mandaURL(oficina.value, 2)">Tomar</button>
+        </div>
+            
+        </main>
+        <br><br><br><br><br><br>
+        <p class="centrado">
+                La aplicación se utiliza para saber cuantos documentos entran en la Facultad de Ingeniería Electrónica y Telecomunicaciones.</br>
+                En la interfaz debe seleccionar una dependencia y en el cuadro de texto de la derecha le mostrará el código de esa dependencia precedido del código de la facultad.</br>
+                Si selecciona una subdependencia, se muestra el código de la subdependencia precedido del código de la facultad con la dependencia. </br>
+                Si presiona el botón "Consecutivo" se le mostrará el documento al que le corresponde guardar</br>
+                Si presiona el botón "Tomar" agregará un documento en el servidor. </br>
+            </p>    
+</body>
+</html>
